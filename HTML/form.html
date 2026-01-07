@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmhouse Booking</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        form {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Farmhouse Rental Booking</h2>
+
+<form>
+
+    <label>Full Name:</label>
+    <input type="text" required>
+
+    <label>Mobile Number:</label>
+    <input type="tel" required>
+
+    <label>Email:</label>
+    <input type="email">
+
+    <label>Check-in Date:</label>
+    <input type="date" required>
+
+    <label>Check-out Date:</label>
+    <input type="date" required>
+
+    <label>Guests:</label>
+    <input type="number" min="1" required>
+
+    <label>Event Type:</label>
+    <select>
+        <option>Family</option>
+        <option>Birthday</option>
+        <option>Wedding</option>
+        <option>Corporate</option>
+    </select>
+
+    <label>Requirements:</label>
+    <textarea rows="3"></textarea>
+
+    <a href="https://api.whatsapp.com/send?phone=916305284031&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse"
+   target="_blank"
+   style="text-decoration:none;">
+   
+    <button class="btn"
+        type="button"
+        >
+        Book Now
+    </button>
+</a>
+
+
+</form>
+
+</body>
+</html>
