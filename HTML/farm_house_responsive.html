@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Farmhouse Booking</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,11 +18,6 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
-        /* Navigation */
         nav a {
             color: white;
             text-decoration: none;
@@ -31,20 +25,23 @@
             font-weight: bold;
         }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Form Container */
-        main {
-            width: 800px;
+        /* FLEX CONTAINER */
+        .flex-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 20px;
         }
 
-        input,
-        select,
-        textarea {
+        /* Left & Right Sections */
+        .form-section, .info-section {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        input, select, textarea {
             width: 100%;
             padding: 6px;
             margin-top: 5px;
@@ -60,11 +57,23 @@
             cursor: pointer;
         }
 
-        /* Map Section */
+        /* Info Cards */
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-section li {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Map */
         .map-container {
-            width: 800px;
+            max-width: 1100px;
             margin: 40px auto;
             text-align: center;
+            padding: 0 20px;
         }
 
         /* Footer */
@@ -81,23 +90,32 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Green Meadows Farmhouse Booking</h1>
-        <nav>
-            <a href="#booking-form">Book Now</a> |
-            <a href="#location">Qutubuddin Guda</a>
-        </nav>
-    </header>
+<header>
+    <h1>Green Meadows Farmhouse Booking</h1>
+    <nav>
+        <a href="#booking-form">Book Now</a> |
+        <a href="#location">Qutubuddin Guda</a>
+    </nav>
+</header>
+
+<!-- FLEXBOX LAYOUT -->
+<div class="flex-container" id="booking-form">
 
     <!-- Booking Form -->
-    <main id="booking-form">
-        <h2 style="text-align:center;">Farmhouse Rental Booking</h2>
+    <div class="form-section">
+        <h2>Farmhouse Rental Booking</h2>
 
         <form>
             <label>Full Name:</label>
@@ -129,46 +147,49 @@
             <label>Requirements:</label>
             <textarea rows="3"></textarea>
 
-            <!-- WhatsApp Book Now Button -->
             <a href="https://api.whatsapp.com/send?phone=916305284031&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse"
-               target="_blank"
-               style="text-decoration:none;">
+               target="_blank" style="text-decoration:none;">
                 <button type="button" class="btn">Book Now</button>
             </a>
         </form>
-    </main>
-
-    <!-- Map Section -->
-    <div class="map-container" id="location">
-        <h3>Farmhouse Location</h3>
-        <p>
-            📍 <b>Green Meadows Farmhouse</b><br>
-            19-4-33-9-3, Qutubuddin Guda, Moinabad,<br>
-            Hyderabad, Telangana 501504
-        </p>
-
-        <iframe
-            src="https://www.google.com/maps?q=19-4-33-9-3%20Qutubuddin%20Guda%20Moinabad%20Hyderabad&output=embed"
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy">
-        </iframe>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>
-            Contact us:
-            <a href="tel:+918328460472">+91 8328460472</a> |
-            <a href="https://api.whatsapp.com/send?phone=918328460472&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse"
-               target="_blank">
-                WhatsApp
-            </a>
-        </p>
-        <p>&copy; 2026 Green Meadows Farmhouse</p>
-    </footer>
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>🌿 Spacious Green Area</li>
+            <li>🏊 Swimming Pool</li>
+            <li>🎉 Perfect for Events</li>
+            <li>🚗 Ample Parking</li>
+            <li>🔒 Safe & Secure</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Map -->
+<div class="map-container" id="location">
+    <h3>Farmhouse Location</h3>
+    <p>
+        📍 <b>Green Meadows Farmhouse</b><br>
+        19-4-33-9-3, Qutubuddin Guda, Moinabad,<br>
+        Hyderabad, Telangana 501504
+    </p>
+
+    <iframe
+        src="https://www.google.com/maps?q=19-4-33-9-3%20Qutubuddin%20Guda%20Moinabad%20Hyderabad&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+    </iframe>
+</div>
+
+<footer>
+    <p>Contact us:
+        <a href="tel:+918328460472">+91 8328460472</a> |
+        <a href="https://api.whatsapp.com/send?phone=918328460472" target="_blank">WhatsApp</a>
+    </p>
+    <p>&copy; 2026 Green Meadows Farmhouse</p>
+</footer>
 
 </body>
 </html>
