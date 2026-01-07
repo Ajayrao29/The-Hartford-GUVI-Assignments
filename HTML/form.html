@@ -5,79 +5,156 @@
     <title>Farmhouse Booking</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        form {
+ 
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation*/
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main form container */
+        main {
             width: 800px;
             margin: 20px auto;
             padding: 20px;
         }
+
         input, select, textarea {
             width: 100%;
             padding: 6px;
             margin-top: 5px;
             margin-bottom: 10px;
         }
+
         .btn {
-            display: block;
-            text-align: center;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: green;
             color: white;
-            text-decoration: none;
+            border: none;
             font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Map section */
+        .map-container {
+            width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #25D366; /* WhatsApp green */
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-<h2 style="text-align:center;">Farmhouse Rental Booking</h2>
+<!-- Header -->
+<header>
+    <h1>Green Meadows Farmhouse Booking</h1>
+    <nav>
+        <a href="#booking-form">Book Now</a> |
+        <a href="#location">Qutubuddin Guda</a>
+    </nav>
+</header>
 
-<form>
+<!-- Main Form -->
+<main id="booking-form">
+    <h2 style="text-align:center;">Farmhouse Rental Booking</h2>
 
-    <label>Full Name:</label>
-    <input type="text" required>
+    <form>
+        <label>Full Name:</label>
+        <input type="text" required>
 
-    <label>Mobile Number:</label>
-    <input type="tel" required>
+        <label>Mobile Number:</label>
+        <input type="tel" required>
 
-    <label>Email:</label>
-    <input type="email">
+        <label>Email:</label>
+        <input type="email">
 
-    <label>Check-in Date:</label>
-    <input type="date" required>
+        <label>Check-in Date:</label>
+        <input type="date" required>
 
-    <label>Check-out Date:</label>
-    <input type="date" required>
+        <label>Check-out Date:</label>
+        <input type="date" required>
 
-    <label>Guests:</label>
-    <input type="number" min="1" required>
+        <label>Guests:</label>
+        <input type="number" min="1" required>
 
-    <label>Event Type:</label>
-    <select>
-        <option>Family</option>
-        <option>Birthday</option>
-        <option>Wedding</option>
-        <option>Corporate</option>
-    </select>
+        <label>Event Type:</label>
+        <select>
+            <option>Family</option>
+            <option>Birthday</option>
+            <option>Wedding</option>
+            <option>Corporate</option>
+        </select>
 
-    <label>Requirements:</label>
-    <textarea rows="3"></textarea>
+        <label>Requirements:</label>
+        <textarea rows="3"></textarea>
 
-    <a href="https://api.whatsapp.com/send?phone=916305284031&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse"
-   target="_blank"
-   style="text-decoration:none;">
-   
-    <button class="btn"
-        type="button"
-        >
-        Book Now
-    </button>
-</a>
+        <!-- WhatsApp Book Now button -->
+        <a href="https://api.whatsapp.com/send?phone=916305284031&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse"
+           target="_blank" style="text-decoration:none;">
+            <button type="button" class="btn">Book Now</button>
+        </a>
+    </form>
+</main>
 
+<!-- Map Section -->
+<div class="map-container" id="location">
+    <h3>Farmhouse Location</h3>
+    <p>
+        📍 <b>Green Meadows Farmhouse</b><br>
+        19‑4‑33‑9‑3, Qutubuddin Guda, Moinabad,<br>
+        Hyderabad, Telangana 501504
+    </p>
 
-</form>
+    <iframe
+        src="https://www.google.com/maps?q=19-4-33-9-3%20Qutubuddin%20Guda%20Moinabad%20Hyderabad&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Contact us: <a href="tel:+918328460472">+91 8328460472</a> | 
+    <a href="https://api.whatsapp.com/send?phone=918328460472&text=Hi%20I%20am%20interested%20in%20booking%20your%20farmhouse" target="_blank">WhatsApp</a></p>
+    <p>&copy; 2026 Green Meadows Farmhouse</p>
+</footer>
 
 </body>
 </html>
