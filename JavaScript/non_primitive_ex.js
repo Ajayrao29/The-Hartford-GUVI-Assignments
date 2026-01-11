@@ -1,9 +1,9 @@
 function calculateBusFare(busIndex, travelKm, travelHrs) {
-    const baseKm = 100;
+   const baseKm = 100;
     const baseHrs = 24;
     const extraKmRate = 5;
     const extraHrRate = 3;
-
+ 
     const buses = [
         { type: "20 Seater", price: 5000 },
         { type: "30 Seater", price: 7000 },

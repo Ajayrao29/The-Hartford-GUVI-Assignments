@@ -1,3 +1,5 @@
+
+
 // Customer information
 const customerName = "Ajay";
 const bookingType = "Farmhouse Booking";
