@@ -1,0 +1,14 @@
+<header class="header">
+  <div class="logo">
+    🏠 <span>Homes</span>
+  </div>
+
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Filter by city"
+      [(ngModel)]="city"
+    />
+    <button (click)="onSearch()">Search</button>
+  </div>
+</header>

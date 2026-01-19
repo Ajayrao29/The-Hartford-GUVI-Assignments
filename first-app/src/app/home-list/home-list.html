@@ -1,0 +1,11 @@
+<div class="grid">
+  <div class="card" *ngFor="let home of filteredHomes">
+    <img [src]="home.image" />
+
+    <div class="card-content">
+      <h3>{{ home.name }}</h3>
+      <p>📍 {{ home.city }}</p>
+      <a href="#">Learn More ></a>
+    </div>
+  </div>
+</div>

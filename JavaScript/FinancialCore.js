@@ -1,5 +1,4 @@
 // FinancialCore.js
-
 class FinancialAccount {
     constructor(accountNumber, accountHolder, balance = 0) {
         this.accountNumber = accountNumber;
@@ -21,7 +20,7 @@ class FinancialAccount {
         this._balance += amount;
         this._recordTransaction(amount, "credit", description);
     }
-
+  
     withdraw(amount, description = "Withdrawal") {
         if (amount <= 0) {
             throw new Error("Withdrawal amount must be positive");

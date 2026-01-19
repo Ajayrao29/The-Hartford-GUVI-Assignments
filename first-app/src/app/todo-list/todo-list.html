@@ -1,0 +1,15 @@
+<div class="todo-container">
+<h2>Todo todo-list </h2>
+<form (ngSubmit)="addTodo()" #todoForm>
+  <input type="text" [(ngModel)]="newTodoTitle" name="title" placeholder="Enter new todo" required class="todo-input"/>
+  <button type="submit" class="add-btn">Add Todo</button>
+</form>
+
+<!--Todo List-->
+<ul class="todo-list">
+    @for (todo of todos(); track todo.id) {
+        <li  class="todo-item">
+            <input type
+        </li>
+    }
+</ul>
